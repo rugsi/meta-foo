@@ -1,0 +1,17 @@
+Build Instructions
+==================
+
+To build the project, follow these steps:
+
+- Using kas:
+
+```
+kas build kas-meta-foo.yml
+kas build kas-meta-foo.yml --target foo-image -c populate_sdk
+```
+
+This meta-layer builds an example program which just prints the contents of
+X_PROTOCOL inside X11/X.h provided by the xorgproto package.
+
+This will demonstrate that just by adding the xorgproto as a build dependency
+of foo-program, will not cause xorgproto-dev to be installed in the SDK.
